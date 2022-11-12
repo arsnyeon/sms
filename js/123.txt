@@ -1,0 +1,50 @@
+    <iframe id="myframe" src="https://sms.arsn.cn/" width="100%" height="100%" frameborder="0"></iframe>
+	 <script>
+	//屏蔽F12和右键
+	 function click(e) {
+	 if (document.all) {
+	 if (event.button == 2 || event.button == 3) {
+	 alert("欢迎失恋博物馆匿名信，有什么需要帮忙的话，请与站长联系！谢谢您的合作！！！");
+			  oncontextmenu = 'return false';
+			}
+		  }
+	 if (document.layers) {
+	 if (e.which == 3) {
+			  oncontextmenu = 'return false';
+			}
+		  }
+		}
+	 if (document.layers) {
+		  document.captureEvents(Event.MOUSEDOWN);
+		}
+		document.onmousedown = click;
+		document.oncontextmenu = new Function("return false;")
+
+		document.onkeydown = document.onkeyup = document.onkeypress = function () {
+	 if (window.event.keyCode == 123) {
+			window.event.returnValue = false;
+	 return (false);
+		  }
+		}
+	//禁用右键（防止右键查看源代码） 
+		window.oncontextmenu = function () { return false; }
+	 //禁止任何键盘敲击事件（防止F12和shift+ctrl+i调起开发者工具） 
+		window.onkeydown = window.onkeyup = window.onkeypress = function () {
+		  window.event.returnValue = false;
+	 return false;
+		}
+	 //如果用户在工具栏调起开发者工具，那么判断浏览器的可视高度和可视宽度是否有改变，如有改变则关闭本页面 
+	 var h = window.innerHeight, w = window.innerWidth;
+		window.onresize = function () {
+	 if (h != window.innerHeight || w != window.innerWidth) {
+			window.close();
+			window.location = "about:blank";
+		  }
+		}
+    // default options
+    ConsoleBan.init()
+    // custom options
+    ConsoleBan.init({
+      redirect: 'https://sms.o7g.cn/'
+    })
+  </script>
