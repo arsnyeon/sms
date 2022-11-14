@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkvue_admin"]=self["webpackChunkvue_admin"]||[]).push([[257],{5257:function(n,e,u){u.r(e),u.d(e,{default:function(){return f}});var t=function(){var n=this,e=n._self._c;return e("div",[n._v(" 我是移动端404 ")])},i=[],l={name:"MobileNotFound"},r=l,a=u(2349),c=(0,a.Z)(r,t,i,!1,null,"943c6fbe",null),f=c.exports}}]);
